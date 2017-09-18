@@ -1,0 +1,215 @@
+/* -------------------НАЧАЛО----------------
+                   Общие стили
+--------------------------------------------*/
+$main-color-dark: #1c3a99;
+$main-color-light: #d1d9e6;
+body {
+  font-size: 14px;
+  font-family: 'PT Sans Caption', Arial, sans-serif;
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PT Sans Caption', Arial, sans-serif;
+}
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+i {
+  &.blue {
+    color: $main-color-dark;
+  }
+  &.red {
+    color: red;
+  }
+  &.green {
+    color: green;
+  }
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+textarea {
+  resize: none;
+}
+.gray {
+  color: #bbbbbb;
+}
+.uk-icon-button:not([aria-expanded="true"]) {
+  cursor: pointer;
+}
+.uk-form .uk-button-primary {
+  color: white;
+}
+
+/* Begin Scrollbar Stylization */
+.styled-scrollbar::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+}
+.styled-scrollbar::-webkit-scrollbar {
+  width: 3px;
+  background-color: #F5F5F5;
+}
+.styled-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #cacaca;
+}
+/* End Scrollbar Stylization */
+
+/* Begin Loading animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: .5rem solid $main-color-light;
+  border-top-color: $main-color-dark;
+  animation: spin 1s infinite linear;
+  margin: 80px auto 0;
+}
+/* End Loading animation */
+
+/* -------------------КОНЕЦ----------------
+                   Общие стили
+--------------------------------------------*/
+
+.upper-panel {
+  background-color: lighten($main-color-dark, 20);
+  padding-top: 15px;
+  padding-bottom: 10px;
+
+  a.uk-navbar-toggle {
+    color: white;
+  }
+}
+
+/* -------------------НАЧАЛО----------------
+              СТРАНИЦА АВТОРИЗАЦИИ
+--------------------------------------------*/
+.login-page {
+  background: linear-gradient(to bottom,
+          rgba(28, 58, 153, .8) 0%,
+          rgba(28, 58, 153, .8) 100%),
+  50% 0/cover url(../images/background_astana.jpg);
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top: 10%;
+  font-size: 14px;
+  font-family: 'PT Sans Caption', Arial, sans-serif;
+
+  @media screen and (max-width: 768px) {
+    background-size: auto;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+
+  form {
+    color: $main-color-light;
+    margin: 0 auto;
+    max-width: 490px;
+    padding: 65px 55px 55px;
+    position: relative;
+    border-radius: 7px;
+    background-color: rgba(96, 97, 255, 0.24);
+    box-shadow: 0 20px 13px 0 rgba(0, 0, 0, 0.2),
+    -15px 6px 13px 0 rgba(0, 0, 0, 0.1),
+    15px 6px 13px 0 rgba(0, 0, 0, 0.1),
+    0 -10px 13px 0 rgba(0, 0, 0, 0.05);
+
+    @media screen and (max-width: 768px) {
+      padding: 40px 25px 25px;
+      text-align: center;
+    }
+
+    //стилизация плейсхолдеров
+    ::-webkit-input-placeholder {
+      color: $main-color-light;
+    }
+    :-ms-input-placeholder {
+      color: $main-color-light;
+    }
+
+    img.logo {
+      position: absolute;
+      left: 50%;
+      margin-left: -64px;
+      top: -45px;
+      border-radius: 7px;
+      box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1),
+      -5px 6px 10px 0 rgba(0, 0, 0, 0.07),
+      5px 6px 10px 0 rgba(0, 0, 0, 0.07),
+      0 -3px 10px 0 rgba(0, 0, 0, 0.03);
+
+      @media screen and (max-width: 768px) {
+        width: 75px;
+        margin-left: -37px;
+        top: -20px;
+      }
+    }
+
+    label {
+      color: $main-color-light;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+      display: inline-block;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=password] {
+      color: $main-color-light;
+      display: block;
+      background-color: transparent;
+      border: 2px $main-color-light solid;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 24px;
+      width: 100%;
+
+      @media screen and (max-width: 768px) {
+        padding: 8px;
+      }
+    }
+
+    input[type=submit] {
+      border: none;
+      border-radius: 20px;
+      color: #0b1b63;
+      cursor: pointer;
+      font-weight: bold;
+      padding: 12px 25px;
+      text-transform: uppercase;
+      font-size: 15px;
+      background: linear-gradient(to right,
+              rgb(167, 211, 255) 0%,
+              rgb(150, 202, 255) 30%,
+              rgb(108, 174, 255) 60%,
+              rgb(108, 174, 255) 100%);
+      box-shadow: 0 11px 65px 0 rgb(10, 24, 95);
+    }
+
+    .checkbox-container {
+      float: right;
+      padding-top: 7px;
+
+      @media screen and (max-width: 768px) {
+        float: none;
+      }
+    }
+  }
+}
+/* -------------------КОНЕЦ----------------
+              СТРАНИЦА АВТОРИЗАЦИИ
+--------------------------------------------*/

@@ -1,0 +1,165 @@
+@charset "UTF-8";
+/* -------------------НАЧАЛО----------------
+                   Общие стили
+--------------------------------------------*/
+body {
+  font-size: 14px;
+  font-family: 'PT Sans Caption', Arial, sans-serif;
+  margin: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PT Sans Caption', Arial, sans-serif; }
+
+a:hover {
+  text-decoration: none; }
+
+i.blue {
+  color: #1c3a99; }
+i.red {
+  color: red; }
+i.green {
+  color: green; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+textarea {
+  resize: none; }
+
+.gray {
+  color: #bbbbbb; }
+
+.uk-icon-button:not([aria-expanded="true"]) {
+  cursor: pointer; }
+
+.uk-form .uk-button-primary {
+  color: white; }
+
+/* Begin Scrollbar Stylization */
+.styled-scrollbar::-webkit-scrollbar-track {
+  background-color: #F5F5F5; }
+
+.styled-scrollbar::-webkit-scrollbar {
+  width: 3px;
+  background-color: #F5F5F5; }
+
+.styled-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #cacaca; }
+
+/* End Scrollbar Stylization */
+/* Begin Loading animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+.loading {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 0.5rem solid #d1d9e6;
+  border-top-color: #1c3a99;
+  animation: spin 1s infinite linear;
+  margin: 80px auto 0; }
+
+/* End Loading animation */
+/* -------------------КОНЕЦ----------------
+                   Общие стили
+--------------------------------------------*/
+.upper-panel {
+  background-color: #3f65dc;
+  padding-top: 15px;
+  padding-bottom: 10px; }
+  .upper-panel a.uk-navbar-toggle {
+    color: white; }
+
+/* -------------------НАЧАЛО----------------
+              СТРАНИЦА АВТОРИЗАЦИИ
+--------------------------------------------*/
+.login-page {
+  background: linear-gradient(to bottom, rgba(28, 58, 153, 0.8) 0%, rgba(28, 58, 153, 0.8) 100%), 50% 0/cover url(../images/background_astana.jpg);
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top: 10%;
+  font-size: 14px;
+  font-family: 'PT Sans Caption', Arial, sans-serif; }
+  @media screen and (max-width: 768px) {
+    .login-page {
+      background-size: auto; } }
+  .login-page * {
+    box-sizing: border-box; }
+  .login-page form {
+    color: #d1d9e6;
+    margin: 0 auto;
+    max-width: 490px;
+    padding: 65px 55px 55px;
+    position: relative;
+    border-radius: 7px;
+    background-color: rgba(96, 97, 255, 0.24);
+    box-shadow: 0 20px 13px 0 rgba(0, 0, 0, 0.2), -15px 6px 13px 0 rgba(0, 0, 0, 0.1), 15px 6px 13px 0 rgba(0, 0, 0, 0.1), 0 -10px 13px 0 rgba(0, 0, 0, 0.05); }
+    @media screen and (max-width: 768px) {
+      .login-page form {
+        padding: 40px 25px 25px;
+        text-align: center; } }
+    .login-page form ::-webkit-input-placeholder {
+      color: #d1d9e6; }
+    .login-page form :-ms-input-placeholder {
+      color: #d1d9e6; }
+    .login-page form img.logo {
+      position: absolute;
+      left: 50%;
+      margin-left: -64px;
+      top: -45px;
+      border-radius: 7px;
+      box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1), -5px 6px 10px 0 rgba(0, 0, 0, 0.07), 5px 6px 10px 0 rgba(0, 0, 0, 0.07), 0 -3px 10px 0 rgba(0, 0, 0, 0.03); }
+      @media screen and (max-width: 768px) {
+        .login-page form img.logo {
+          width: 75px;
+          margin-left: -37px;
+          top: -20px; } }
+    .login-page form label {
+      color: #d1d9e6;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+      display: inline-block; }
+    .login-page form input[type=text],
+    .login-page form input[type=email],
+    .login-page form input[type=password] {
+      color: #d1d9e6;
+      display: block;
+      background-color: transparent;
+      border: 2px #d1d9e6 solid;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 24px;
+      width: 100%; }
+      @media screen and (max-width: 768px) {
+        .login-page form input[type=text],
+        .login-page form input[type=email],
+        .login-page form input[type=password] {
+          padding: 8px; } }
+    .login-page form input[type=submit] {
+      border: none;
+      border-radius: 20px;
+      color: #0b1b63;
+      cursor: pointer;
+      font-weight: bold;
+      padding: 12px 25px;
+      text-transform: uppercase;
+      font-size: 15px;
+      background: linear-gradient(to right, #a7d3ff 0%, #96caff 30%, #6caeff 60%, #6caeff 100%);
+      box-shadow: 0 11px 65px 0 #0a185f; }
+    .login-page form .checkbox-container {
+      float: right;
+      padding-top: 7px; }
+      @media screen and (max-width: 768px) {
+        .login-page form .checkbox-container {
+          float: none; } }
+
+/* -------------------КОНЕЦ----------------
+              СТРАНИЦА АВТОРИЗАЦИИ
+--------------------------------------------*/
+
+/*# sourceMappingURL=styles.css.map */

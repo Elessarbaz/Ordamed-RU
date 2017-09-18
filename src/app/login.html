@@ -1,0 +1,19 @@
+<div class="login-page">
+  <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+    <img class="logo" src="assets/images/logo.png" alt="Лого Sales Master">
+
+    <label for="email">Email</label>
+    <input type="email" placeholder="your email" id="email" name="email" [(ngModel)]="model.email" #email="ngModel" required>
+
+    <label for="password">Password</label>
+    <input type="password" placeholder="your password" id="password" name="password" [(ngModel)]="model.password" #password="ngModel" required>
+
+    <input type="submit" value="Войти">
+
+    <!--<div class="checkbox-container">-->
+    <!--<input type="checkbox" name="remember" id="remember" checked>-->
+    <!--<label for="remember">Запомнить меня</label>-->
+    <!--</div>-->
+
+  </form>
+</div>
